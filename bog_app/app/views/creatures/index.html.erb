@@ -1,2 +1,8 @@
-<h1>Creatures#index</h1>
-<p>Find me in app/views/creatures/index.html.erb</p>
+
+<h1>Things That Go Bump in The Bog </h1>
+<% @creatures.each do |creature| %>
+<h2><%=creature.name%></h2>
+    <p>
+      <strong>Description:</strong> <%= creature.description %>
+    </p>
+  <% end %>
