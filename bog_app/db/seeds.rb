@@ -1,2 +1,7 @@
-Creature.create({name: "Luke", description: "Jedi"})
-Creature.create({name: "Darth Vader", description: "Father of Luke"})
+Creature.destroy_all
+
+Creature.create({name: "Yoda", url_link: "http://vignette2.wikia.nocookie.net/disney/images/9/95/Master_Yoda.png", description: "The species to which the legendary Jedi Master Yoda belonged was ancient and shrouded in mystery. The species had two sexes: male and female. Members of that species were small in size, with green skin and long pointed ears. Their three-fingered hands ended in claws. Their ears were expressive, curling and unfurling in accordance with their emotions. The species' life expectancy spanned several centuries"})
+Creature.create({name: "Luke", url_link: "http://static.srcdn.com/wp-content/uploads/Luke-Skywalker-in-the-swamps-of-Dagobah.jpeg", description: "Jedi"})
+Creature.create({name: "Darth Vader", url_link: "http://i447.photobucket.com/albums/qq198/aguilend/DarthVader.png", description: "Father of Luke"})
+Creature.create({name: "Bog Fodder", url_link: "http://i.imgur.com/EFZWPNS.png", description: "much like the Meeseeks, these entities exist to serve. However this flavor of Meeseek solely lives to practice the use of delete buttons. The longer a Bog Fodder exists the stronger desire to be deleted. PLEASE FREE THIS BOG FODDER FROM THE INTERWEBZ!"})
+Creature.create({name: "R.O.U.S.", url_link: "https://extrawellrounded.files.wordpress.com/2012/10/rous.jpg" , description: "Rodents of Unusual Size. Native to the Fire Swamp. These beasts eat practically anything, especially living things, like humans. They are dangerous and don't attack or strike unless they are not out-numbered or smell blood."})

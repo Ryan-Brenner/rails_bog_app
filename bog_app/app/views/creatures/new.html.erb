@@ -1,5 +1,35 @@
-<%= form_for @creature do |f| %>
-    <%= f.text_field :name %>
-    <%= f.text_area :description %>
+
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+        <%= link_to image_tag('swampCreature.png', size: '50x50'), '/', id: "logo"%>
+        <div class="navbar-right">
+        <%= form_tag(creatures_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Creatures" %>
+        <%= submit_tag "Search", :name => nil %>
+        	
+        </div>
+             
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "new creature",   new_creature_path %></li>
+            <li><%= link_to "random creature", creature_path(0)%></li>
+          </ul>
+        
+    </header>
+
+   
+<br>
+
+
+<br><br><br><br>
+<div class = "container">
+<br><%= form_for @creature do |f| %>
+	<%= "New Creature Name"%>
+ <br><%= f.text_field :name %><br>
+    <%= "New Creature Description" %>
+<br><%= f.text_area :description %><br>
+    <%= "New Creature Image link"%>
+<br><%= f.text_area :url_link %><br>  
     <%= f.submit "Save Creature" %>
   <% end %>
+</div>
+<%end%>

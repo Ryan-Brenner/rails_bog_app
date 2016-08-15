@@ -1,3 +1,27 @@
+
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+        <%= link_to image_tag('swampCreature.png', size: '50x50'), '/', id: "logo"%>
+        <div class="navbar-right">
+        <%= form_tag(creatures_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Creatures" %>
+        <%= submit_tag "Search", :name => nil %>
+        </div>
+        <% end %>
+        
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "new creature",   new_creature_path %></li>
+            <li><%= link_to "random creature", creature_path(0)%></li>
+          </ul>
+        
+    </header>
+
+<br>
+<br>
+
+<div class ="container">
 <h3><%= @creature.name %></h3>
-<p><%=  @creature.description %></p>
+<%= link_to image_tag(@creature.url_link, size: '250x200'), '/' %>
+<p class ="col-xs-5"><%=  @creature.description %></p>
 <%= button_to "Delete", @creature, method: :delete %>
+</div>
